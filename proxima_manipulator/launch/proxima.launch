@@ -1,0 +1,15 @@
+<launch>
+
+	<!--Urdf file path-->
+	<param name="robot_description" textfile="$(find proxima_manipulator)/urdf/proxima_manipulator.urdf"/>
+
+	<!--spawn a empty gazebo world-->
+	<include file="$(find gazebo_ros)/launch/empty_world.launch" />
+	<node name="tf_footprint_base" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 base_link base_footprint 40" />
+	<rosparam file="$(find proxima_manipulator)/controllers.yaml" command="load"/>
+	
+	<!--spawn model-->
+	<node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -urdf -model proxima_manipulator"/>
+	<node name="controller_spawner" pkg="controller_manager" type="spawner" args="arm_controller"/>
+
+</launch>

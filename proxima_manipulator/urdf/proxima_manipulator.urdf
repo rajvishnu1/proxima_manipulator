@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="proxima_manipulator">
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="2.67147415300428E-16 -5.48172618408671E-16 0.0278836801469794"
+        rpy="0 0 0" />
+      <mass
+        value="0.247721059115889" />
+      <inertia
+        ixx="0.0003011867427044"
+        ixy="2.38059441973575E-20"
+        ixz="3.56187820388695E-20"
+        iyy="0.0003011867427044"
+        iyz="-2.04797568301113E-19"
+        izz="0.000467545439957378" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="1.26016822536365E-05 -0.00067913549103308 0.0548525819368087"
+        rpy="0 0 0" />
+      <mass
+        value="0.299441756132738" />
+      <inertia
+        ixx="0.000424744928526324"
+        ixy="-1.11192496861313E-06"
+        ixz="-1.27943860369015E-07"
+        iyy="0.000485678490070992"
+        iyz="7.0098607134611E-06"
+        izz="0.000369014762438299" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_ jt1 "
+    type="continuous">
+    <limit effort="100" lower="-3.14" upper="3.14" velocity="1.0"/>
+    <origin
+      xyz="0 0 0.05"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.0927774515413347 0.0714111850999219 0.303440607317138"
+        rpy="0 0 0" />
+      <mass
+        value="0.431675804968219" />
+      <inertia
+        ixx="0.00187530189920104"
+        ixy="-3.15309080841052E-06"
+        ixz="-0.000522393947089355"
+        iyy="0.00212512273898093"
+        iyz="-4.72040942247626E-06"
+        izz="0.000339309367555789" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_jt2"
+    type="continuous">
+    <limit effort="100" lower="-1.57" upper="1.57" velocity="1.0"/>
+    <origin
+      xyz="0 0 0.095"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+    <axis
+      xyz="-0.58275 0.81265 0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.439880024349184 0.114137252620308 0.107894384276403"
+        rpy="0 0 0" />
+      <mass
+        value="0.280632653657222" />
+      <inertia
+        ixx="0.000227451246830242"
+        ixy="-1.39148558684808E-06"
+        ixz="-0.000154309607138457"
+        iyy="0.000445652071983742"
+        iyz="-6.43948002898041E-07"
+        izz="0.00028018235697428" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_jt3"
+    type="continuous">
+    <limit effort="10" lower="-1.57" upper="1.57" velocity="1.0"/>
+    <origin
+      xyz="-0.12238 -0.087757 0.59565"
+      rpy="0 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="-0.58275 0.81265 0" />
+  </joint>
+  <link
+    name="link_5">
+    <inertial>
+      <origin
+        xyz="0.31305576498068 -0.042835829112622 0.291112292331689"
+        rpy="0 0 0" />
+      <mass
+        value="0.101723003375221" />
+      <inertia
+        ixx="5.05288197170505E-05"
+        ixy="1.7230477580174E-07"
+        ixz="8.33758443432768E-07"
+        iyy="5.32093589759462E-05"
+        iyz="2.14427349204548E-08"
+        izz="6.39523336665948E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_jt4"
+    type="continuous">
+    <limit effort="50" lower="-1.57" upper="1.57" velocity="1.0"/>
+    <origin
+      xyz="0.296903285779486 0.215102977796523 -0.0615465136497864"
+      rpy="0 0 0" />
+    <parent
+      link="link_4" />
+    <child
+      link="link_5" />
+    <axis
+      xyz="-0.583107713219487 0.812391589092072 -0.00230233715980965" />
+  </joint>
+  <link
+    name="link_6">
+    <inertial>
+      <origin
+        xyz="0.355110082221449 -0.14521877869131 0.32556616338284"
+        rpy="0 0 0" />
+      <mass
+        value="0.0113820917596356" />
+      <inertia
+        ixx="1.08134791014413E-06"
+        ixy="-1.97947224579249E-08"
+        ixz="4.80302422869398E-08"
+        iyy="1.23014925249638E-06"
+        iyz="-3.57031245382337E-07"
+        izz="1.87342754174238E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/link_6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_jt5"
+    type="continuous">
+    <limit effort="50" lower="-1.57" upper="1.57" velocity="1.0"/>
+    <origin
+      xyz="0.0159247963270868 0.0971478489940458 -0.0327463091047406"
+      rpy="0 0 0" />
+    <parent
+      link="link_5" />
+    <child
+      link="link_6" />
+    <axis
+      xyz="-0.7345362270283 -0.526010820973493 0.428683038388298" />
+  </joint>
+  <link
+    name="gripper">
+    <inertial>
+      <origin
+        xyz="0.351511028143606 -0.149212672082347 0.337891577266145"
+        rpy="0 0 0" />
+      <mass
+        value="0.000240771357022716" />
+      <inertia
+        ixx="6.17674068126977E-09"
+        ixy="-1.39190737054382E-09"
+        ixz="-8.1909708213908E-10"
+        iyy="3.25954858389964E-09"
+        iyz="-2.39097692004316E-09"
+        izz="5.85315549906598E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/gripper.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://proxima_manipulator/meshes/gripper.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_jt6"
+    type="continuous">
+    <limit effort="50" lower="-3.14" upper="3.14" velocity="1.0"/>
+    <origin
+      xyz="0.00806188691852791 0.00482819873140239 0.00535915693213174"
+      rpy="0 0 0" />
+    <parent
+      link="link_6" />
+    <child
+      link="gripper" />
+    <axis
+      xyz="-0.644290827582677 0.342379827086424 -0.68386064625558" />
+  </joint>
+
+  <gazebo>
+  <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+    <robotNamespace>/proxima_manipulator</robotNamespace>
+  </plugin>
+</gazebo>
+
+
+  <transmission name="tran1">
+   <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_ jt1">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor1">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+   <transmission name="tran2">
+   <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_ jt2">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor2">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+   <transmission name="tran3">
+   <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_ jt3">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor3">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+   <transmission name="tran4">
+   <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_ jt4">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor4">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+   <transmission name="tran5">
+   <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_ jt5">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor5">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+
+
+   <transmission name="tran6">
+   <type>transmission_interface/SimpleTransmission</type>
+    <joint name="link_ jt6">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="motor6">
+    <hardwareInterface>PositionJointInterface</hardwareInterface>
+    <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+    </transmission>
+    
+    
+    <gazebo>
+    <plugin name="control" filename="libgazebo_ros_control.so"/>
+    </gazebo>
+
+</robot>
